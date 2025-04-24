@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 0 0% 98%;
+    --foreground: 210 10% 23%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 10% 23%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 10% 23%;
+    --primary: 210 79% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 10% 97%;
+    --secondary-foreground: 210 10% 23%;
+    --muted: 210 10% 97%;
+    --muted-foreground: 210 10% 56%;
+    --accent: 142 70% 49%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 210 79% 53%;
+    --result: 142 70% 49%;
+  }
+  .dark {
+    --background: 210 10% 10%;
+    --foreground: 0 0% 98%;
+    --card: 210 10% 15%;
+    --card-foreground: 0 0% 98%;
+    --popover: 210 10% 15%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 210 79% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 10% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 210 10% 20%;
+    --muted-foreground: 210 10% 70%;
+    --accent: 142 70% 49%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 10% 20%;
+    --input: 210 10% 20%;
+    --ring: 210 79% 53%;
+    --result: 142 70% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for calculator */
+.calculator-section {
+  @apply mb-8 p-6 bg-card rounded-lg shadow-sm border border-border;
+}
+
+.calculator-title {
+  @apply text-2xl font-semibold mb-4 text-foreground;
+}
+
+.calculator-description {
+  @apply text-sm text-muted-foreground mb-4;
+}
+
+.input-field {
+  @apply bg-white border border-input rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
+}
+
+.input-field-blue {
+  @apply bg-blue-50 border border-blue-200 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
+}
+
+.output-field {
+  @apply bg-secondary border border-input rounded-md px-3 py-2 text-foreground font-medium;
+}
+
+.calculator-button {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md font-medium transition-colors;
+}
+
+.result-value {
+  @apply text-accent font-bold;
+}
+
+.formula-container {
+  @apply mt-4 p-3 bg-muted rounded-md text-sm;
+}
+
+.examples-toggle {
+  @apply text-primary text-sm hover:underline cursor-pointer;
+}
+
+.examples-container {
+  @apply mt-2 p-3 bg-muted rounded-md text-sm hidden;
+}

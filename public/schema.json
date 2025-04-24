@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Percentage Calculator",
+  "description": "Free online percentage calculator with multiple calculation types. Calculate percentages, convert between percent, decimal and fraction, find percent change, error, and more.",
+  "applicationCategory": "CalculatorApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Basic percentage calculations",
+    "Percentage calculator in common phrases",
+    "Percent to fraction to decimal converter",
+    "Add or subtract percentage calculator",
+    "Percent change calculator",
+    "Percent error calculator",
+    "Percent difference calculator"
+  ]
+}
